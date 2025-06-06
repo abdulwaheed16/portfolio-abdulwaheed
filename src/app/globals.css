@@ -49,37 +49,6 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
-
-  /* Animations */
-  @keyframes accordion-down {
-    from {
-      height: 0;
-    }
-    to {
-      height: var(--radix-accordion-content-height);
-    }
-  }
-
-  @keyframes accordion-up {
-    from {
-      height: var(--radix-accordion-content-height);
-    }
-    to {
-      height: 0;
-    }
-  }
-
-  @animation accordion-down {
-    name: accordion-down;
-    duration: 0.2s;
-    ease: ease-out;
-  }
-
-  @animation accordion-up {
-    name: accordion-up;
-    duration: 0.2s;
-    ease: ease-out;
-  }
 }
 
 /* Root Variables */
@@ -181,6 +150,37 @@
 /* Smooth Animations */
 * {
   transition: all 0.3s ease;
+}
+
+/* Animations */
+@keyframes accordion-down {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+  }
+}
+
+@keyframes accordion-up {
+  from {
+    height: var(--radix-accordion-content-height);
+  }
+  to {
+    height: 0;
+  }
+}
+
+@animation accordion-down {
+  name: accordion-down;
+  duration: 0.2s;
+  ease: ease-out;
+}
+
+@animation accordion-up {
+  name: accordion-up;
+  duration: 0.2s;
+  ease: ease-out;
 }
 
 /* Floating Animation */
